@@ -11,17 +11,16 @@ services:
     - 8253:8253
     - 9453:9453
   micros-java:
+    image: meumicroservico
     container_name: springboot
-    build:            
-        dockerfile: Dockerfile
-    image: meu-micros-java:latest
+    build: .
     ports:
         - 8080:8080
   banco:
    image: postgres:10
    environment:
-    POSTGRES_PASSWORD: MSdgl321
-    POSTGRES_DB: sushidb
-    POSTGRES_USER: mastersushi
+    POSTGRES_PASSWORD: SENHAFORTE369
+    POSTGRES_DB: msdb
+    POSTGRES_USER: userms
    ports:
-     - 5432:5432          
+     - 5432:5432
