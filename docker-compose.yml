@@ -17,7 +17,7 @@ services:
     image: meu-micros-java:latest
     ports:
         - 8080:8080
-  sushi-bd:
+  banco:
    image: postgres:10
    environment:
     POSTGRES_PASSWORD: MSdgl321
