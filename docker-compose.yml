@@ -1,0 +1,21 @@
+version: "3.5"
+services:
+  apimanager:
+    container_name: apim
+    hostname: apim
+    image: wso2/wso2am:latest
+    labels:
+      name: wso2
+    ports:
+    - 8290:8290
+    - 8253:8253
+    - 9453:9453
+#    volumes:
+#    	- ...
+  micros-java:
+      container_name: springboot
+      build:            
+          dockerfile: Dockerfile
+      image: meu-micros-java:latest
+      ports:
+          - 8080:8080
