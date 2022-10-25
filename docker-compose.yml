@@ -10,12 +10,18 @@ services:
     - 8290:8290
     - 8253:8253
     - 9453:9453
-#    volumes:
-#    	- ...
   micros-java:
-      container_name: springboot
-      build:            
-          dockerfile: Dockerfile
-      image: meu-micros-java:latest
-      ports:
-          - 8080:8080
+    container_name: springboot
+    build:            
+        dockerfile: Dockerfile
+    image: meu-micros-java:latest
+    ports:
+        - 8080:8080
+  sushi-bd:
+   image: postgres:10
+   environment:
+    POSTGRES_PASSWORD: MSdgl321
+    POSTGRES_DB: sushidb
+    POSTGRES_USER: mastersushi
+   ports:
+     - 5432:5432          
