@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk-alpine
+FROM openjdk:18-jdk-alpine3.15
 MAINTAINER baeldung.com
-COPY target/docker-message-server-1.0.0.jar message-server-1.0.0.jar
-ENTRYPOINT ["java","-jar","/message-server-1.0.0.jar"]
+COPY primeiro-ms/target/primeiro-ms-0.0.1-SNAPSHOT.jar primeiro-ms-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","/primeiro-ms-0.0.1-SNAPSHOT.jar"]
